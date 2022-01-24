@@ -16,7 +16,7 @@
     <script src="./static/index.js"></script>
 </head>
 
-<body oncontextmenu=self.event.returnValue=false>
+<body onload="closeWelcomeLayer()" oncontextmenu=self.event.returnValue=false>
     <div id="config">
         <span style=" font-size: 32px; ">游戏基础信息配置</span>
         <br>
@@ -42,7 +42,7 @@
                 <div style="font-size:2.6em; color:#FEF002;">新概念Homo游戏</div><br />
                 <div style="font-size:2.2em; color:#fff; line-height:1.5em;">
                     从最底下先辈开始<br />
-                    看看你20秒能雷普多少个<br />
+                    看看你这几秒能雷普多少个<br />
                 </div>
                 <br />
                 <div id="btn_group" style="display: block;">
