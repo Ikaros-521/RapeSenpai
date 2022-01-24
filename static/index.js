@@ -7,7 +7,7 @@ document.write('<style type="text/css">' +
     '</style>');
 if (isDesktop) {
     document.write('<div id="gameBody">');
-    consoloe.log("isDesktop");
+    console.log("isDesktop");
 }
 var body, blockSize, GameLayer = [],
     GameLayerBG, touchArea = [],
@@ -20,6 +20,9 @@ document.write(createGameLayer());
 
 function body_init() {
     closeWelcomeLayer();
+    var mp3 = "/music/yy.mp3";
+    var mp3 = new Audio(mp3);
+    mp3.play(); //播放 mp3这个音频对象
     // alert("close");
 }
 

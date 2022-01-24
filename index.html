@@ -14,16 +14,26 @@
     <script src="./static/index.js"></script>
     <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
     <script src="https://passport.cnblogs.com/scripts/jsencrypt.min.js"></script>
+    <!-- 音乐播放器 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.0/dist/APlayer.min.css">
+    <script src="https://blog-static.cnblogs.com/files/yjlaugus/APlayer.min.js">
+    </script>
+    <script src="https://unpkg.com/meting@1.2/dist/Meting.min.js">
+    </script>
 </head>
 
 <body onload="body_init()" oncontextmenu=self.event.returnValue=false>
+    <div id="aplayer" class="aplayer" data-id="865331941" data-server="netease"
+        data-type="playlist" data-fixed="true" data-listfolded="true" data-order="random"
+        data-theme="#F58EA8">
+    </div>
     <div id="config">
         <span style=" font-size: 32px; ">游戏基础信息配置</span>
         <br>
         <span>TIME：</span>
         <input id="timeInput" type="text" />
         <br>
-        <button type="button" onclick="init()" style=" margin: 10px; width: 50%; ">确认</button>
+        <button type="button" onclick="init()" style="margin: 10px;width: 50%;color: #ffffff;background: #7bbcf4;border: 1px solid #767676;border-radius: 3px;font-size: 28px;">确认</button>
     </div>
 
     <div id="GameScoreLayer" class="BBOX SHADE bgc1" style="display:none;">
