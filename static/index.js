@@ -20,7 +20,7 @@ document.write(createGameLayer());
 
 function body_init() {
     closeWelcomeLayer();
-    alert("close")
+    alert("close");
 }
 
 function init() {
