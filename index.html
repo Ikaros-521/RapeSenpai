@@ -16,7 +16,16 @@
     <script src="./static/index.js"></script>
 </head>
 
-<body onLoad="init()" oncontextmenu=self.event.returnValue=false>
+<body oncontextmenu=self.event.returnValue=false>
+    <div id="config">
+        <span style=" font-size: 32px; ">游戏基础信息配置</span>
+        <br>
+        <span>TIME：</span>
+        <input id="timeInput" type="text" />
+        <br>
+        <button type="button" onclick="init()" style=" margin: 10px; width: 50%; ">确认</button>
+    </div>
+
     <div id="GameScoreLayer" class="BBOX SHADE bgc1" style="display:none;">
         <div style="padding:5%;margin-top: 200px;background-color: rgba(125, 181, 216, 0.3);">
             <div id="GameScoreLayer-text"></div>
@@ -25,7 +34,6 @@
             <button type="button" class="btn btn-secondary btn-lg" onclick="replayBtn()">重来</button>
             <button type="button" class="btn btn-secondary btn-lg" onclick="window.location.href='https://github.com/Xiaohuang257/RapeSenpai'">开源</button>
         </div>
-    </div>
     </div>
     <div id="welcome" class="SHADE BOX-M">
         <div class="welcome-bg FILL"></div>

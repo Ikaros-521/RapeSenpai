@@ -11,7 +11,12 @@ var body, blockSize, GameLayer = [],
     GameTimeLayer;
 var transform, transitionDuration;
 
+var timeInput = 20;
+
 function init() {
+    timeInput = parseInt(document.getElementById("timeInput").value);
+    document.getElementById('config').style.display = 'none';
+
     showWelcomeLayer();
     body = document.getElementById('gameBody') || document.body;
     body.style.height = window.innerHeight + 'px';
@@ -122,7 +127,7 @@ function gameRestart() {
     _gameScore = 0;
     _gameOver = false;
     _gameStart = false;
-    _gameTimeNum = 20;
+    _gameTimeNum = timeInput;
     GameTimeLayer.innerHTML = creatTimeText(_gameTimeNum);
     countBlockSize();
     refreshGameLayer(GameLayer[0]);
