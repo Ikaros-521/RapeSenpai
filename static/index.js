@@ -13,6 +13,8 @@ var transform, transitionDuration;
 
 var timeInput = 20;
 
+closeWelcomeLayer();
+
 function init() {
     timeInput = parseInt(document.getElementById("timeInput").value);
     document.getElementById('config').style.display = 'none';
