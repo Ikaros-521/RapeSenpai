@@ -258,6 +258,10 @@ body {
     height: 100%;
     color: black;
     position: absolute;
-    top: 300px;
+    top: 20%;
     text-align: center;
+}
+
+#config input {
+    margin: 10px;
 }
