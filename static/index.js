@@ -36,7 +36,8 @@ function onInputFileChange() {
 }
 
 function init() {
-    timeInput = parseInt(document.getElementById("timeInput").value);
+    if(document.getElementById("timeInput").value.length != 0) 
+        timeInput = parseInt(document.getElementById("timeInput").value);
     document.getElementById('config').style.display = 'none';
 
     showWelcomeLayer();
