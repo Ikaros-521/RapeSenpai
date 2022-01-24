@@ -30,7 +30,6 @@ function onInputFileChange() {
     var file = document.getElementById('file').files[0];
     var url = URL.createObjectURL(file);
     console.log(url);
-    document.getElementById("video_id").src = url;
     var audio = document.getElementsByTagName('audio')[0];
     audio.src = url;
     audio.load();

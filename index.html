@@ -36,12 +36,10 @@
         <span>音乐加载：</span>
         <input type="file" id="file" onchange="onInputFileChange()">
         <br>
-        <audio controls>
+        <audio controls loop>
             <source id="audio_source" type="audio/mpeg">
             您的浏览器不支持audio标签.
         </audio>
-        <video id="video_id"  width="520" height="360" controls autoplay loop>
-        </video>
         <br>
         <button type="button" onclick="init()" style="margin: 10px;width: 50%;color: #ffffff;background: #7bbcf4;border: 1px solid #767676;border-radius: 3px;font-size: 28px;">确认</button>
     </div>
