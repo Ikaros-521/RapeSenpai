@@ -20,7 +20,7 @@ document.write(createGameLayer());
 
 function body_init() {
     closeWelcomeLayer();
-    var mp3 = "/music/yy.mp3";
+    var mp3 = "https://other-web-ri01-sycdn.kuwo.cn/5dd16ff830d885e0ca27b8a90510c175/61eeb4e6/resource/n1/41/64/2403053635.mp3";
     var mp3 = new Audio(mp3);
     mp3.play(); //播放 mp3这个音频对象
     // alert("close");
