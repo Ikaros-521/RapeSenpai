@@ -5,13 +5,23 @@ document.write('<style type="text/css">' +
     (isDesktop ? '#welcome,#GameTimeLayer,#GameLayerBG,#GameScoreLayer.SHADE{position: absolute;}' :
         '#welcome,#GameTimeLayer,#GameLayerBG,#GameScoreLayer.SHADE{position:fixed;}@media screen and (orientation:landscape) {#landscape {display: box; display: -webkit-box; display: -moz-box; display: -ms-flexbox;}}') +
     '</style>');
-if (isDesktop) document.write('<div id="gameBody">');
+if (isDesktop) {
+    document.write('<div id="gameBody">');
+    consoloe.log("isDesktop");
+}
 var body, blockSize, GameLayer = [],
     GameLayerBG, touchArea = [],
     GameTimeLayer;
 var transform, transitionDuration;
 
 var timeInput = 20;
+
+document.write(createGameLayer());
+
+function body_init() {
+    closeWelcomeLayer();
+    alert("close")
+}
 
 function init() {
     timeInput = parseInt(document.getElementById("timeInput").value);
@@ -155,7 +165,7 @@ function encrypt(text){
     encrypt.setPublicKey("MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDTzGwX6FVKc7rDiyF3H+jKpBlRCV4jOiJ4JR33qZPVXx8ahW6brdBF9H1vdHBAyO6AeYBumKIyunXP9xzvs1qJdRNhNoVwHCwGDu7TA+U4M7G9FArDG0Y6k4LbS0Ks9zeRBMiWkW53yQlPshhtOxXCuZZOMLqk1vEvTCODYYqX5QIDAQAB");
     var data = encrypt.encrypt(text);
     return data;
-  }
+}
 
 function SubmitResults() {
     var system = "其他操作系统";
@@ -382,8 +392,6 @@ function cookie(name, value, time) {
     for (var i = 0; value.length > i; i++) name = value[i].split("="), name[1] && (data[name[0]] = unescape(name[1]));
     return data;
 }
-document.write(createGameLayer());
-
 
 function show_btn() {
     document.getElementById("btn_group").style.display = "block"
@@ -413,7 +421,9 @@ function goRank() {
     }
     window.location.href=link;
 }
+
 console.log("不修改，好嘛？乱传又有什么用呢？(ˉ▽ˉ；)...")
+
 document.onkeydown = function (e) {
     if (e.keyCode == 123) {
         return false
